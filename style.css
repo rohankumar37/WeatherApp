@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #064d2c;
+    background-image: linear-gradient(to bottom right, #064d2c,#9e8309);
+  }
+  .wrapper{
+      width:350px;
+      border-radius: 8px;
+      background: #ffffff;
+  }
+  .wrapper header{
+      color:#064d2c;
+      font-size:25px;
+      font-weight:800;
+      padding:10px 15px;
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid #9e8309;
+  }
+  header i{
+      cursor: pointer;
+      font-size: 0px;
+      margin-right:5px;
+  }
+  .wrapper.active header i{
+      font-size:30px;
+      margin-left:5px;
+  }
+  .wrapper .input-part{
+      margin: 20px 25px 30px;
+  }
+  .wrapper.active .input-part{
+      display: none;
+  }
+  .input-part .info-txt{
+      display: none;
+      font-size: 18px;
+      text-align: center;
+      padding: 12px 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+  }
+  .info-txt.error{
+    display: block;
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+  .info-txt.pending{
+      display: block;
+      color: #0c5460;
+      background: #d1ecf1;
+      border: 1px solid #bee5eb;
+  }
+  .input-part :where(input, button){
+      width: 100%;
+      height: 50px;
+      border:none;
+      outline:none;
+      font-size: 20px;
+      border-radius: 8px;
+  }
+  .input-part input{
+      text-align: center;
+      border: 2px solid #9e8309;
+  }
+  .input-part input:is(:focus, :valid){
+      border: 2px solid #9e8309;
+  }
+  .input-part .separator{
+      height:1px;
+      width: 100%;
+      background:#9e8309;
+      margin:25px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .separator::before{
+      content: "or";
+      color:#9e8309;
+      font-size: 18px;
+      padding: 0 15px;
+      background: #ffffff;
+  }
+  .input-part button{
+      color:#ffffff;
+      cursor:pointer;
+      background: #064d2c;
+
+  }
+  
+  .wrapper .weather-part{
+      margin:30px 0 0;
+      display: none;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+  }
+  .wrapper.active .weather-part{
+    display: flex;
+}
+  .weather-part img{
+      max-width: 120px;
+  }
+  .weather-part .temp{
+      display:flex;
+      font-size:70px;
+      font-weight: 500;
+  }
+  .weather-part .temp .numb{
+      font-weight: 600;
+  }
+  .weather-part .temp .deg{
+      font-size: 40px;
+      text-align: center;
+      margin: -5px 20px 15px;
+  }
+  .weather-part .location{
+      display:flex;
+      align-items: center;
+      font-size: 21px;
+      margin-bottom: 30px;
+  }
+  .location i{
+    font-size:22px;
+    margin-right:5px;
+  }
+  .weather-part .bottom-details{
+      width:100%;
+      display: flex;
+      align-items: center;
+      border:1px solid #9e8309;
+      justify-content: space-between;
+  }
+  .bottom-details .column{
+      width:100%;
+      display:flex;
+      padding: 15px 0;
+      align-items: center;
+      justify-content: center;
+  }
+  .column i{
+      color: #37a7f7;
+      font-size: 40px;
+  }
+  .column.humidity{
+      border-left:1px solid #9e8309;
+  }
+  .details .temp, .humidity span{
+      font-size: 18px;
+      font-weight: 500;
+      margin-top: -3px;
+  }
+  .details .temp .deg{
+      margin:0;
+      font-size: 17px;
+      padding:0 2px 0 1px;
+  }
+  .details p{
+      font-size: 14px;
+      margin-top: -6px;
+  }
